@@ -1,0 +1,103 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: min(520px, 100%);
+  display: grid;
+  gap: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.controls input {
+  width: 72px;
+  padding: 6px 8px;
+}
+
+.controls button {
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.info {
+  text-align: center;
+  display: grid;
+  gap: 6px;
+}
+
+.board {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  gap: 0;
+  border: 2px solid #ddd;
+}
+
+.board-row {
+  display: grid;
+}
+
+.cell {
+  display: grid;
+  place-items: center;
+  border: 1px solid #eee;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell.disabled {
+  cursor: not-allowed;
+}
+
+.cell svg {
+  width: 70%;
+  height: 70%;
+}
+
+.cell.o {
+  color: #1e66ff;
+}
+
+.cell.x {
+  color: #ff2d55;
+}
+
+.cell.won {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.history {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.history button {
+  padding: 6px 10px;
+}
+
+.small {
+  opacity: 0.8;
+  font-size: 13px;
+}
